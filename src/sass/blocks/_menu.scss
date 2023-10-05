@@ -15,14 +15,14 @@
         border-radius: 20px;
         background: $title-color;
         &:hover {
-            background: $btn-color;
+            background: $main-color;
         }
     }
     span.long {
         width: 46px;
         background: $title-color;
         &:hover {
-            background: $btn-color;
+            background: $main-color;
         }
     }  
 }
@@ -44,8 +44,9 @@
     }
     &__block {
         position: relative;
+        display: flex;
         width: 100%;
-        height: 100px;
+        height: 150px;
         background-color: $title-color;
         transition: all 0.6s;
         z-index: 10;
@@ -55,12 +56,22 @@
         top: 20px;
         right: 30px;
         cursor: pointer;
+        transition: 0.6s;
+        z-index: 5;
+        &:hover {
+            svg path {
+                fill: $main-color;
+            } 
+        }
     }
     &__list {
-        width: 80%;
+        position: absolute;
         display: flex;
+        flex-direction: row;
         justify-content: space-around;
-        align-items: center;
+        width: 100%;
+        padding: 15px;
+        margin: 0;
         list-style-type: none;
         padding-top: 30px;
     }
@@ -69,7 +80,7 @@
         font-weight: 700;
         line-height: 36px;
         a {
-            color: $btn-color;
+            color: $main-color;
             text-decoration: none;
             transition: all 0.6s;
             &:hover {
@@ -82,9 +93,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        top: 35%;
-        right: 10%;
-        width: 120px;
+        top: 70%;
+        right: 50%;
+        transform: translateX(+50%);
+        width: 50%;
         height: 25px;
         bottom:50px;
         &_link {
@@ -94,7 +106,7 @@
             }
         &:hover {
             svg path {
-                fill: $btn-color;
+                fill: $main-color;
             }
             }
         }
@@ -106,6 +118,6 @@
         width: 100%;
         height: 100%;
         background-color: $block-color;
-        opacity: 0.75;
+        opacity: 0.3;
     }
 }

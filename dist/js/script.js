@@ -9,3 +9,9 @@ hamburger.addEventListener("click", () => {
 closeElem.addEventListener("click", () => {
   menu.classList.remove("active");
 });
+
+document.addEventListener("keydown", (e) => {
+  if (e.keyCode == 27) {
+    menu.classList.remove("active");
+  }
+});

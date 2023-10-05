@@ -22,7 +22,7 @@
         }
         &:hover {
             svg path {
-                fill: $btn-color;
+                fill: $main-color;
             }
         }
     }
@@ -35,7 +35,7 @@
     }
     &__text {
         cursor: default;
-        color: $btn-color;
+        color: $main-color;
         height: 150px;
         width: 25px;
         font-weight: bold;

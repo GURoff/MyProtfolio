@@ -100,9 +100,21 @@
         height: 25px;
         bottom:50px;
         &_link {
+            &-facebook {
+                width: 20px;
+                height: 20px;
+            }
             &-linkedin {
                 width: 20px;
-                height: 23px;
+                height: 20px;
+            }
+            &-instagram {
+                width: 20px;
+                height: 20px;
+            }
+            &-github {
+                width: 20px;
+                height: 20px;
             }
         &:hover {
             svg path {

@@ -15,8 +15,20 @@
     &__link {
         cursor: pointer;
         margin-top: 10px;
-        &_linkedin {
+        &-facebook {
+            width: 20px;
+            height: 20px;
+        }
+        &-linkedin {
             transform: rotate(-90deg);
+            width: 20px;
+            height: 20px;
+        }
+        &-instagram {
+            width: 20px;
+            height: 20px;
+        }
+        &-github {
             width: 20px;
             height: 20px;
         }

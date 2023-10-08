@@ -10,8 +10,8 @@
         grid-template-columns: repeat(4, minmax(270px, auto));
         grid-template-rows: repeat(2, 270px);
         grid-auto-rows: minmax(270px, auto);
-        column-gap: 13px;
-        row-gap: 13px;
+        column-gap: 20px;
+        row-gap: 20px;
     }
     &__item {
         padding: 30px 30px 25px 30px;

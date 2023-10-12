@@ -169,6 +169,35 @@
             }
         }
     }
+    .resume {
+        padding-top: 40px;
+        &__wrapper {
+            grid-template-columns: 1fr;
+            column-gap: 60px;
+            row-gap: 40px;
+        }
+        &__column {
+            padding-left: 20px;
+        }
+    }
+    .skills {
+        padding-top: 40px;
+        &__wrapper {
+            padding: 0 20px;
+            grid-template-columns: repeat(2, 270px);
+            justify-content: space-between;
+        }
+        &__ratings {
+            margin-top: 70px; 
+            grid-template-columns: repeat(auto-fit, 320px);
+            justify-content: space-between;
+            padding: 0;
+            column-gap: 0;
+            &-line {
+                width: 100%;
+            }
+        }
+    }
 }
 
 @media (max-width: 576px) {
@@ -235,6 +264,15 @@
         }
         &__skills {
             grid-template-columns: 1fr;
+        }
+    }
+    .skills {
+        &__wrapper {
+            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, 270px);
+        }
+        &__ratings {
+            grid-template-columns: repeat(auto-fit, 300px);
         }
     }
 }

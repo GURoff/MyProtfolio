@@ -65,6 +65,27 @@
             }
         }
     }
+    .resume {
+        &__wrapper {
+            grid-template-columns: repeat(2, 320px);
+            column-gap: 60px;
+        }
+    }
+    .skills {
+        &__wrapper {
+            padding: 0 20px;
+        }
+        &__ratings {
+            margin-top: 70px; 
+            grid-template-columns: repeat(auto-fit, 320px);
+            justify-content: space-between;
+            padding: 0;
+            column-gap: 0;
+            &-line {
+                width: 100%;
+            }
+        }
+    }
 }
 
 @media (max-width: 768px) {

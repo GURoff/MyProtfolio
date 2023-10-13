@@ -32,6 +32,7 @@ counters.forEach((item, i) => {
 });
 
 $(document).ready(function () {
+  
   //Mailer for form
   $("form").submit(function (e) {
     e.preventDefault();

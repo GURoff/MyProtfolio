@@ -32,6 +32,26 @@ counters.forEach((item, i) => {
 });
 
 $(document).ready(function () {
+  //Mailer for form
+  $("form").submit(function (e) {
+    e.preventDefault();
+
+    if (!$(this).valid()) {
+      return;
+    }
+
+    $.ajax({
+      type: "POST",
+      url: "mailer/smart.php",
+      data: $(this).serialize(),
+    }).done(function () {
+      $(this).find("input").val("");
+
+      $("form").trigger("reset");
+    });
+    return false;
+  });
+
   //Smooth scroll and pageup
   $(window).scroll(function () {
     if ($(this).scrollTop() > 1600) {

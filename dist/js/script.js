@@ -1,6 +1,7 @@
 const hamburger = document.querySelector(".hamburger"),
   menu = document.querySelector(".menu"),
-  closeElem = document.querySelector(".menu__close");
+  closeElem = document.querySelector(".menu__close"),
+  links = document.querySelectorAll(".menu a");
 
 hamburger.addEventListener("click", () => {
   menu.classList.add("active");
@@ -8,6 +9,12 @@ hamburger.addEventListener("click", () => {
 
 closeElem.addEventListener("click", () => {
   menu.classList.remove("active");
+});
+
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("active");
+  });
 });
 
 document.addEventListener("keydown", (e) => {

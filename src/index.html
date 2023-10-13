@@ -118,6 +118,9 @@
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
+    <!-- <div id="scroll-animate-main">
+      <div id="scroll-animate-main">
+        <div class="wrapper-parallax"> -->
     <!-- Side panel -->
     <aside class="sidepanel">
       <a
@@ -220,12 +223,14 @@
 
         <nav>
           <ul class="menu__list">
-            <li class="menu__link"><a href="#">ABOUT ME</a></li>
-            <li class="menu__link"><a href="#">MY EXPERIENCE</a></li>
-            <li class="menu__link"><a href="#">MY SKILLS</a></li>
-            <li class="menu__link"><a href="#">MY WORKS</a></li>
+            <li class="menu__link"><a href="#aboutMe">ABOUT ME</a></li>
+            <li class="menu__link">
+              <a href="#myExperience">MY EXPERIENCE</a>
+            </li>
+            <li class="menu__link"><a href="#mySkills">MY SKILLS</a></li>
+            <li class="menu__link"><a href="#portfolio">MY WORKS</a></li>
             <!-- <li class="menu__link"><a href="#">PRICES</a></li> -->
-            <li class="menu__link"><a href="#">CONTACTS</a></li>
+            <li class="menu__link"><a href="#contacts">CONTACTS</a></li>
           </ul>
         </nav>
 
@@ -326,12 +331,12 @@
           <a href="#portfolio" class="promo__link btn btn_animation"
             >Portfolio</a
           >
-          <a href="#" class="promo__link">About me</a>
+          <a href="#aboutMe" class="promo__link">About me</a>
         </div>
       </div>
     </div>
     <!-- =====Second section - About me===== -->
-    <section class="about">
+    <section id="aboutMe" class="about">
       <div class="container">
         <div class="about__wrapper">
           <div class="about__photo">
@@ -357,7 +362,8 @@
               I began to master tools and languages for front-end development. I
               am passionate about creating quality digital products that meet
               all customer needs. I'm excited to use my technical skills to
-              develop applications and systems. <br />
+              develop applications and systems.
+              <br />
               <br />
               The purpose of this page is to introduce you to me, my skills,
               works and interests. <br />
@@ -501,7 +507,6 @@
       </div>
     </section>
     <!-- =====Third section - Education and Experience===== -->
-
     <section class="resume">
       <div class="container">
         <h2 class="title title_fz20 title__section-title">Experience</h2>
@@ -645,7 +650,9 @@
           </div>
           <!-- ==Experience== -->
           <div class="resume__column">
-            <h3 class="title title_fz22 resume__column-title">Experience</h3>
+            <h3 id="myExperience" class="title title_fz22 resume__column-title">
+              Experience
+            </h3>
             <ul>
               <!-- To be continue of Experience -->
               <li>
@@ -728,7 +735,7 @@
       </div>
     </section>
     <!-- =====Fourth section - tools and Skills===== -->
-    <section class="skills">
+    <section id="mySkills" class="skills">
       <div class="container">
         <h2 class="title title_fz20 title__section-title">Skills</h2>
         <div class="title title_fz36 title__section-subtitle">
@@ -927,7 +934,7 @@
       </div>
     </section>
     <!-- =====Six section - Price ===== Will be invisible-->
-    <section class="price">
+    <!-- <section class="price">
       <div class="container">
         <h2 class="title title_fz20 title__section-title">Price-list</h2>
         <div class="divider"></div>
@@ -986,9 +993,9 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- =====Seventh section - Contacts ===== -->
-    <section class="contacts">
+    <section id="contacts" class="contacts">
       <div class="container">
         <div class="contacts__wrapper">
           <div class="contacts__photo">
@@ -1123,6 +1130,9 @@
     <a href="#up" class="pageup">
       <img src="icons/up-arrow.svg" alt="chevron up" class="pageup__animated" />
     </a>
+    <!-- </div>
+      </div>
+    </div> -->
     <!-- Connect jQuery script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Connect WOW -->

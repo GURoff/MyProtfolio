@@ -33,9 +33,9 @@ counters.forEach((item, i) => {
 
 $(document).ready(function () {
   //Modal windows ------
-  $("[data-modal=send-message]").on("click", function () {
-    $(".overlay, #thanks").fadeIn("slow");
-  });
+  // $("[data-modal=send-message]").on("click", function () {
+  //   $(".overlay, #thanks").fadeIn("slow");
+  // });
 
   $(".modals__close").on("click", function () {
     $(".overlay, #thanks").fadeOut("slow");
@@ -92,7 +92,7 @@ $(document).ready(function () {
       data: $(this).serialize(),
     }).done(function () {
       $(this).find("input").val("");
-
+      $(".overlay, #thanks").fadeIn("slow");
       $("form").trigger("reset");
     });
     return false;

@@ -120,10 +120,19 @@
             border-radius: 5px;
         }
     }
-    
     &__btn {
         border: none;
         font-size: 14px;
         font-weight: 700;
+    }
+    .error {
+        border: 1px solid red;
+    }
+    label.error {
+        border:none;
+        text-align: center;
+        font-size: 10px;
+        top: 100%;
+        color: $main-color;
     }
 }

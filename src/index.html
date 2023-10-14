@@ -110,11 +110,11 @@
       sizes="16x16"
       href="icons/favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="icons/favicon/manifest.json" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
-    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="text/html" href="css/animate.css" />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
@@ -1096,21 +1096,23 @@
               Or leave your details and I will write to you myself:
             </div>
 
-            <form action="#" class="contacts__form">
+            <form id="contacts-form" action="#" class="contacts__form">
               <div class="contacts__input">
-                <input required name="name" id="name" type="text" />
+                <input name="name" id="name" type="text" />
                 <label for="name">Your name</label>
               </div>
               <div class="contacts__input">
-                <input required name="email" id="email" type="email" />
+                <input name="email" id="email" type="email" />
                 <label for="email">Your mail</label>
               </div>
               <div class="contacts__textarea">
-                <textarea name="text" id="message"></textarea>
+                <textarea name="textarea" id="message" type="text"></textarea>
                 <label for="text">Your message</label>
               </div>
               <div class="contacts__triggers">
-                <button class="contacts__btn btn">Send a message</button>
+                <button data-modal="send-message" class="contacts__btn btn">
+                  Send a message
+                </button>
                 <div class="contacts__policy">
                   <input required type="checkbox" />
                   <span
@@ -1126,6 +1128,14 @@
         </div>
       </div>
     </section>
+    <!--===== Modal windows ===== -->
+    <div class="overlay">
+      <div class="modals modals_mini" id="thanks">
+        <div class="modals__close">&times;</div>
+        <div class="modals__subtitle">Thank you for your interest!</div>
+        <div class="modals__descr">I will contact you soon!</div>
+      </div>
+    </div>
     <!-- Chevron logo UP -->
     <a href="#up" class="pageup">
       <img src="icons/up-arrow.svg" alt="chevron up" class="pageup__animated" />
@@ -1135,10 +1145,16 @@
     </div> -->
     <!-- Connect jQuery script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"
+    ></script>
     <!-- Connect jQuery Validate script-->
     <script src="js/jquery.validate.min.js"></script>
-    <!-- Connect jQuery masckedInput script-->
-    <script src="js/jquery.maskedinput.min.js"></script>
     <!-- Connect WOW -->
     <script src="js/wow.min.js"></script>
     <!-- Connect Scroll Parallax script -->

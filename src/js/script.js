@@ -32,7 +32,46 @@ counters.forEach((item, i) => {
 });
 
 $(document).ready(function () {
-  
+  //Modal windows ------
+  $("[data-modal=send-message]").on("click", function () {
+    $(".overlay, #thanks").fadeIn("slow");
+  });
+
+  $(".modals__close").on("click", function () {
+    $(".overlay, #thanks").fadeOut("slow");
+  });
+
+  //validate forms -------------------------------
+  function validateForms(form) {
+    $(form).validate({
+      rules: {
+        name: {
+          required: true,
+          minlength: 2,
+        },
+        email: {
+          required: true,
+          email: true,
+        },
+      },
+      messages: {
+        name: {
+          required: "I should know your name",
+          minlength: jQuery.validator.format(
+            "At least {0} characters required!"
+          ),
+        },
+        email: {
+          required: "I would like to know how to contact you",
+          email: "Your email address must be in the format of name@domain.com",
+        },
+      },
+    });
+  }
+
+  validateForms("#contacts-form");
+  //-----------------------------------------------
+
   //Mailer for form
   $("form").submit(function (e) {
     e.preventDefault();

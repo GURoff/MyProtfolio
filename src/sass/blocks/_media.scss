@@ -308,7 +308,14 @@
         }
         &__block {
             width: 50%;
+            height: 70%;
             padding-left: 40px;
+        }
+        &__list {
+            top: 10%;
+            padding-left: 0px;
+            flex-direction: column;
+            padding-top: 20px;
         }
         &__link {
             margin-bottom: 15px;
@@ -317,14 +324,15 @@
                 top: 14px;
             }
             a {
-                font-size: 18px;
+                font-size: 14px;
             }
         }
         &__social {
             top: 85%;
-            width: 50%;
+            width: 80%;
             height: 25px;
             bottom:50px;
+            justify-content: space-between;
         }
     }
     .about {
@@ -379,5 +387,19 @@
             margin: 0 auto;
             line-height: 18px;
         }
+    }
+    .modals {
+        width: 300px;
+        &__close {
+            top: 5px;
+            right: 0;
+            font-size: 45px;
+        }
+    }
+    .pageup {
+        bottom: 30px;
+        right: 30px;
+        width: 30px;
+        height: 30px;
     }
 }

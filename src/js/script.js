@@ -53,6 +53,9 @@ $(document).ready(function () {
           required: true,
           email: true,
         },
+        checkbox: {
+          required: true,
+        },
       },
       messages: {
         name: {
@@ -64,6 +67,9 @@ $(document).ready(function () {
         email: {
           required: "I would like to know how to contact you",
           email: "Your email address must be in the format of name@domain.com",
+        },
+        checkbox: {
+          required: "This is also required",
         },
       },
     });

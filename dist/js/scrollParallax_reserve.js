@@ -3,11 +3,11 @@ function scrollFooter(scrollY, heightFooter) {
   console.log(heightFooter);
 
   if (scrollY >= heightFooter) {
-    $("contacts").css({
+    $("footer").css({
       bottom: "0px",
     });
   } else {
-    $("contacts").css({
+    $("footer").css({
       bottom: "-" + heightFooter + "px",
     });
   }
@@ -15,7 +15,7 @@ function scrollFooter(scrollY, heightFooter) {
 
 $(window).load(function () {
   var windowHeight = $(window).height(),
-    footerHeight = $("contacts").height(),
+    footerHeight = $("footer").height(),
     heightDocument =
       windowHeight + $(".content").height() + $("footer").height() - 20;
 
@@ -25,7 +25,7 @@ $(window).load(function () {
   });
 
   // Definindo o tamanho dos elementos header e conteúdo
-  $("promo").css({
+  $("header").css({
     height: windowHeight + "px",
     "line-height": windowHeight + "px",
   });
@@ -44,7 +44,7 @@ $(window).load(function () {
       top: "-" + scroll + "px",
     });
 
-    $("promo").css({
+    $("header").css({
       "background-position-y": 50 - (scroll * 100) / heightDocument + "%",
     });
 

@@ -1,0 +1,45 @@
+#scroll-animate {
+    overflow: hidden;
+  }
+  
+  #scroll-animate-main {
+    width: 100%;
+    left: 0;
+    position: fixed;
+  }
+  
+  #heightPage,
+  #heightScroll {
+    width: 10px;
+    top: 0;
+    position: absolute;
+    z-index: 99;
+  }
+  
+  #heightPage {
+    left: 0;
+  }
+  
+  #heightScroll {
+    right: 0;
+  }
+  
+  .wrapper-parallax {
+      margin-top: 100%;
+      margin-bottom: 300px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  #scroll-animate-main {
+    -webkit-transition-property: all;
+       -moz-transition-property: all;
+        transition-property: all;
+  
+    -webkit-transition-duration: 0.4s;
+       -moz-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+  
+    -webkit-transition-timing-function: cubic-bezier(0, 0, 0, 1);
+       -moz-transition-timing-function: cubic-bezier(0, 0, 0, 1);
+        transition-timing-function: cubic-bezier(0, 0, 0, 1);
+  }

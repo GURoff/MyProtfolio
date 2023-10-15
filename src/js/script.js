@@ -23,14 +23,41 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-//Ratings
+//===Ratings===
+// Function to check if an element is visible on the screen
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Function to handle the scroll event and animation start
+function handleScroll() {
+  lines.forEach((item) => {
+    if (isElementInViewport(item)) {
+      const widthValue = item.innerHTML;
+      const parentLine = item.parentElement;
+      parentLine.style.width = widthValue;
+      parentLine.style.animation = `fill 1s linear forwards ${widthValue}`;
+    }
+  });
+}
+
 const counters = document.querySelectorAll(".skills__ratings-counter"),
   lines = document.querySelectorAll(".skills__ratings-line span");
-
+//scroll for animation of spans
+window.addEventListener("scroll", handleScroll);
+//taking % from html for filler
 counters.forEach((item, i) => {
   lines[i].style.width = item.innerHTML;
 });
 
+//==========================================================================
 $(document).ready(function () {
   //Modal windows ------
   // $("[data-modal=send-message]").on("click", function () {

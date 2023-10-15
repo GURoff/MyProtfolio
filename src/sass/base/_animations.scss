@@ -1,3 +1,4 @@
+//arrow Up (scroll)
 @keyframes arrowUpbeat {
     from {
         transform: scale(1);
@@ -8,6 +9,15 @@
     to {
         transform: scale(1);
     }    
+}
+
+@keyframes fill {
+  0% {
+      width: 0;
+  }
+  100% {
+      width: 100%;
+  }
 }
 
 #scroll-animate {

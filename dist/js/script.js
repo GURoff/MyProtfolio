@@ -113,10 +113,20 @@ $(document).ready(function () {
       return;
     }
 
+    // Create object with each form data
+    var formData = {
+      name: $("#name").val(),
+      email: $("#email").val(),
+      message: $("#message").val(),
+    };
+
     $.ajax({
       type: "POST",
-      url: "mailer/smart.php",
-      data: $(this).serialize(),
+      url: "http://localhost:8000/mailer",
+      data: JSON.stringify(formData),
+      // The old version of the mailer
+      // url: "mailer/smart.php",
+      // data: $(this).serialize(),
     }).done(function () {
       $(this).find("input").val("");
       $(".overlay, #thanks").fadeIn("slow");

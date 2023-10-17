@@ -97,6 +97,7 @@ $(document).ready(function () {
         },
         checkbox: {
           required: "This is also required",
+          checkbox: "This is also required",
         },
       },
     });

@@ -16,8 +16,8 @@ class FormData(typing.NamedTuple):
 def send_email(form_data: FormData):
     # Here you should change according to your preferences
     sender_email = "alexdeepwork@gmail.com"
-    sender_password = "ucbm gfjm uoob hkxo"
-    recipient_email = "layok91799@ibtrades.com"
+    sender_password = "Change me"
+    recipient_email = "alexdeepwork@gmail.com"
     subject = "From the Gurov's website"
     body = f"""
     <html>
